@@ -178,3 +178,11 @@ header img {
 .curtainBody:hover header {
     opacity: 0;
 }
+
+.curtainBody:hover header {
+  opacity: 0;
+}
+
+.curtainBody:hover #bgAudio {
+  display: none; /* Hide the audio when the curtain is hiding the website */
+}
