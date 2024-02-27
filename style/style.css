@@ -183,6 +183,3 @@ header img {
   opacity: 0;
 }
 
-.curtainBody:hover #bgAudio {
-  display: none; /* Hide the audio when the curtain is hiding the website */
-}
