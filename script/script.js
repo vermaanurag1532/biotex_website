@@ -8,12 +8,21 @@ function slide() {
 
 document.addEventListener("DOMContentLoaded", function() {
     // Create an audio element
-    var audio = new Audio("../assets/biotex.mp3");
-    
-    // Set attributes for autoplay and loop
-    audio.autoplay = true;
+    var audio = document.getElementById("bgAudio");
+
+    // Set attribute for loop
     audio.loop = true;
 
-    // Append the audio element to the body
-    document.body.appendChild(audio);
+    // Autoplay the audio (check browser policies)
+    audio.play().catch(error => {
+        // Autoplay was prevented
+        console.warn("Autoplay was prevented. Please interact with the page to start audio.");
+    });
 });
+
+function playAudio() {
+    // Play the audio when the button is clicked
+    var audio = document.getElementById("bgAudio");
+    audio.play();
+}
+
