@@ -13,8 +13,18 @@ body {
   }
   
   .content img {
-    width: 100%;
+    width: 50%;
+    margin-left: 30%;
+    margin-top: 10%;
   }
+
+  @media screen and (max-width: 768px) {
+    .content img {
+        width: 80%; /* Adjust the width as needed for smaller screens */
+        margin-left: 10%;
+        margin-top: 30%;
+    }
+}
   
   .curtainContainer {
     position: absolute;
@@ -139,18 +149,32 @@ body {
     height: 100%;
   }
   
-  .overlay {
-    display: block;
-    position: absolute;
-    color: white;
-    top: 0%;
-    left: 0%;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to top, rgba(2, 2, 2, 0) 0vh, black 100vh);
-    transition: opacity 3s ease;
-  }
+
   
   .curtainBody:hover .overlay {
     opacity: 0;
   }
+
+  /* Add these styles to your existing CSS */
+
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #e7e4e4; /* Change the background color as needed */
+    color: white;
+    transition: opacity 3s ease;
+}
+
+header img {
+    max-width: 50px; /* Adjust the size of the logo */
+    max-height: 50px;
+    vertical-align: middle;
+}
+
+.curtainBody:hover header {
+    opacity: 0;
+}
